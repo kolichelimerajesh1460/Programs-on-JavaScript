@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2>1.javascript program on fibonacci series</h2>
+<h2>2.Write a javascript program to convert a temperature from celsius to fahrenheit.</h2>
+<h2>3.javascript program to find square root of number</h2>
+<h2>4.javascript program to check weather the string is palindrome or not</h2>
+<h2>5.javascript program to generate Random number between two numbers or integers </h2>
+<body>
+    <script>
+    //1.javascript program on fibonacci series
+        var first =0;second=1;
+        // console.log(first,second)
+        for( var i=0;i<=5;i++){
+             var temp = first+second;
+            console.log(temp);
+            first = second;
+            second = temp;
+        }
+
+    //2.Write a javascript program to convert a temperature from celsius to fahrenheit.
+        const cToF=function(celsius){
+            const cTemp = celsius;
+            const ToFahr = cTemp * ( 9 / 5 ) + 32;
+            const msg = `${cTemp}\xB0C is ${ToFahr}\xB0F.`;
+            return msg;
+        }
+            //console.log(cToF(40));
+        // From fahrenheit to celsius
+        const fToC = function(fahrenheit){
+            const fTemp = fahrenheit;
+            const fToCel = (fTemp - 32)*(5/9);
+            const msg =` ${fTemp}\xB0F is ${fToCel}\xB0C `;
+            return msg;
+        }
+        console.log(fToC(60));
+
+    // 3.javascript program to find square root of number
+            var a=prompt("Enter the number");
+            var b= Math.sqrt(a);
+            console.log(b);
+
+    //4.javascript program to check weather the string is palindrome or not
+        var string = prompt("Enter the string")
+        var length = string.length;
+         var Msg = 'It is a palindrome'
+         for(var i=0;i<length/2;i++){
+            if(string[i]!=string[length-1-i]){
+                Msg = 'It is not a palindrome'
+            }
+            console.log(`${string}: ${Msg}`)
+         }
+
+    //5.javascript program to generate Random number between two numbers or integers
+         var x = Math.random();
+        //  console.log("First Random number generation :" + x)
+         x = x*(100000-2)+2;
+        //  console.log("Second Random number generation :" + x)
+             console.log("Final random generated is :" +Math.floor(x));
+    </script>
+</body>
+</html>
